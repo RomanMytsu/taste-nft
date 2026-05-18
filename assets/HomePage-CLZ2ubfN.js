@@ -1,1 +1,0 @@
-import{n as e,r as t,t as n}from"./index-BoVOd92H.js";var r={};function i(n,r){return t(),e(`main`,null,`Home Page`)}var a=n(r,[[`render`,i]]);export{a as default};
