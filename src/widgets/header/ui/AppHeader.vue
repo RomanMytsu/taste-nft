@@ -18,7 +18,9 @@ const openWalletModal = () => {
   <header class="header">
     <div class="header__container container">
       <RouterLink to="/" class="header__logo">
-        <img :src="logo" alt="logo" class="header__logo-img" width="47" height="47" />
+        <div class="header__logo-wrapper">
+          <img :src="logo" alt="logo" class="header__logo-img" width="47" height="47" />
+        </div>
       </RouterLink>
       <SearchBar />
       <div class="header__profile-wrapper">
@@ -64,6 +66,11 @@ const openWalletModal = () => {
     justify-content: center;
   }
 
+  &__logo-wrapper {
+    width: 47px;
+    height: 47px;
+  }
+
   &__profile-wrapper {
     margin-left: 16px;
     @media (max-width: $bp-mobile) {
@@ -80,6 +87,16 @@ const openWalletModal = () => {
   &__profile-btn {
     &-text-mob {
       display: none;
+      @media (max-width: $bp-laptop-sm) {
+        display: block;
+        font-size: 32px;
+      }
+    }
+
+    &-text-desc {
+      @media (max-width: $bp-laptop-sm) {
+        display: none;
+      }
     }
   }
 

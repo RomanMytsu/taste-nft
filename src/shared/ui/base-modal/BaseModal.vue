@@ -33,7 +33,6 @@ onUnmounted(() => document.removeEventListener("keydown", handleEscape))
               </slot>
             </div>
           </div>
-
           <div class="modal-content">
             <slot name="content" />
           </div>
@@ -113,8 +112,6 @@ onUnmounted(() => document.removeEventListener("keydown", handleEscape))
 
 .modal-content {
   flex: 1;
-  overflow-y: scroll;
-  
 }
 .fade-enter-active,
 .fade-leave-active {
@@ -129,7 +126,7 @@ onUnmounted(() => document.removeEventListener("keydown", handleEscape))
 .fade-leave-to {
   opacity: 0;
 
-  .mmodal-wrapper {
+  .modal-wrapper {
     transform: scale(0.9) translateY(20px);
   }
 }

@@ -1,4 +1,4 @@
-import profileAvatar from "@/shared/assets/img/hero-avatar.webp"
+import profileAvatar from "@/shared/assets/img/avatar.webp"
 
 export const MOCK_USER = {
   name: "User Name",
