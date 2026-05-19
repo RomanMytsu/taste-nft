@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+html,
+body,
+#app {
+  min-height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
 body,
 p,
 h1,
@@ -42,5 +50,3 @@ a {
 svg {
   flex-shrink: 0;
 }
-
-

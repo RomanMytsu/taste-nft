@@ -5,7 +5,7 @@ import AppLayout from "./layouts/AppLayout.vue"
 
 <template>
   <AppLayout>
-    <RouterView />
+    <router-view />
   </AppLayout>
   <SvgManager />
 </template>

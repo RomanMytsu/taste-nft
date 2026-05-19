@@ -1,3 +1,9 @@
-<script setup></script>
+<script setup>
+import HomeHero from "@/widgets/hero/ui/HomeHero.vue"
+</script>
 
-<template><main>Home Page</main></template>
+<template>
+  <div class="home">
+    <HomeHero />
+  </div>
+</template>

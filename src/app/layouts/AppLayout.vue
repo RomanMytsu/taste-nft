@@ -5,8 +5,21 @@ import AppHeader from "@/widgets/header/ui/AppHeader.vue"
 <template>
   <div class="app-layout">
     <AppHeader />
-    <main>
+
+    <main class="main">
       <slot />
     </main>
   </div>
 </template>
+
+<style scoped lang="scss">
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+}
+</style>

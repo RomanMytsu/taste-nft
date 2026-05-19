@@ -110,7 +110,7 @@ const openWalletModal = () => {
   }
 
   :deep(.search-bar) {
-    margin-left: 34px;
+    margin-left: 25px;
     @media (max-width: $bp-mobile) {
       margin-left: 12px;
     }

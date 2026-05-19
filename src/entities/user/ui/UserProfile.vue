@@ -3,7 +3,7 @@ import { useWalletStore } from "@/features/wallet-connect/useWallet"
 import BaseSvg from "@/shared/ui/icon/BaseSvg.vue"
 import { ref } from "vue"
 
-const { accountData, disconnect } = useWalletStore()
+const { Data, disconnect } = useWalletStore()
 const isDropdownOpen = ref(false)
 // const profileRef = ref(null)
 
@@ -22,23 +22,17 @@ const handleLogout = () => {
     <div class="profile__trigger" @click="toggleDropdown">
       <div class="profile__info">
         <div class="profile__avatar-wrapper">
-          <img
-            :src="accountData.img"
-            alt="Avatar"
-            width="40"
-            height="40"
-            class="profile__avatar-img"
-          />
+          <img :src="Data.img" alt="Avatar" width="40" height="40" class="profile__avatar-img" />
         </div>
         <div class="profile__info-text-wrapper">
-          <p class="profile__info_name">{{ accountData.name }}</p>
-          <p class="profile__info_username">{{ accountData.username }}</p>
+          <p class="profile__info_name">{{ Data.name }}</p>
+          <p class="profile__info_username">{{ Data.username }}</p>
         </div>
       </div>
       <div class="profile__balance">
         <span class="profile__balance_label">Balance:</span>
         <BaseSvg id="icon-sold-icon" width="16" height="16" />
-        <span class="profile__balance_value">{{ accountData.balance }}</span>
+        <span class="profile__balance_value">{{ Data.balance }}</span>
       </div>
       <BaseSvg
         id="icon-icon-arrow-profile"
@@ -55,7 +49,7 @@ const handleLogout = () => {
           <div class="profile__info">
             <div class="profile__avatar-wrapper">
               <img
-                :src="accountData.img"
+                :src="Data.img"
                 alt="Avatar"
                 width="40"
                 height="40"
@@ -63,14 +57,14 @@ const handleLogout = () => {
               />
             </div>
             <div class="profile__info-text-wrapper">
-              <p class="profile__info_name">{{ accountData.name }}</p>
-              <p class="profile__info_username">{{ accountData.username }}</p>
+              <p class="profile__info_name">{{ Data.name }}</p>
+              <p class="profile__info_username">{{ Data.username }}</p>
             </div>
           </div>
           <div class="profile__balance">
             <span class="profile__balance_label">Balance:</span>
             <BaseSvg id="icon-sold-icon" width="16" height="16" />
-            <span class="profile__balance_value">{{ accountData.balance }}</span>
+            <span class="profile__balance_value">{{ Data.balance }}</span>
           </div>
           <BaseSvg
             id="icon-icon-arrow-profile"
@@ -81,7 +75,7 @@ const handleLogout = () => {
           />
         </div>
 
-        <p class="profile__address-label">Address: {{ accountData.address }}</p>
+        <p class="profile__address-label">Address: {{ Data.address }}</p>
         <nav class="profile__nav">
           <button class="profile__nav-link">My profile</button>
           <button class="profile__nav-link">Balance settings</button>
